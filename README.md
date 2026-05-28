@@ -88,8 +88,6 @@ Detected anomalies are visualized through an interactive dashboard to support li
 
 ## Detection Analytics Dashboard
 
-![Traffic Behavior Dashboard](sus.png)
-
 The dashboard visualizes:
 
 * Flow duration distributions
