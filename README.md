@@ -1,4 +1,4 @@
-# Flow-Based Intrusion Detection System (IDS)
+# AI-Assisted Flow-Based Intrusion Detection System
 
 A real-time network intrusion detection system using **Isolation Forest** for anomaly detection.  
 This project captures live traffic, converts packets into flows, and analyzes behavioral patterns to detect suspicious activity.
