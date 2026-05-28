@@ -1,5 +1,11 @@
 # AI-Assisted Flow-Based Intrusion Detection System (IDS)
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Scapy](https://img.shields.io/badge/Scapy-Networking-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
+![Machine Learning](https://img.shields.io/badge/ML-IsolationForest-orange)
+![Status](https://img.shields.io/badge/Status-Active-success)
+
 A real-time flow-based intrusion detection system designed to analyze live network traffic and identify suspicious behavioral patterns using machine learning-driven anomaly detection.
 
 The system captures live packets, aggregates them into network flows, extracts statistical traffic features, and applies Isolation Forest anomaly detection to identify unusual traffic behavior such as abnormal packet bursts, high-throughput communication, and scanning activity.
@@ -11,14 +17,30 @@ Built with a detection engineering mindset, the project simulates lightweight SO
 # Features
 
 * Real-time packet capture using Scapy
-* Flow-based network traffic analysis
+* Flow-based traffic analysis
 * Isolation Forest anomaly detection pipeline
 * Behavioral traffic analytics
 * Interactive Streamlit + Plotly dashboard
-* Detection of suspicious traffic spikes and abnormal flow activity
-* Analyst-oriented suspicious flow inspection
-* Statistical feature extraction from live network traffic
-* Lightweight SOC-style anomaly triage workflow
+* Suspicious flow inspection and anomaly triage
+* Statistical feature extraction from live traffic
+* Lightweight SOC-style workflow simulation
+* Detection of abnormal traffic spikes and burst behavior
+* Analyst-oriented anomaly visualization
+
+---
+
+# Why Flow-Based Detection?
+
+Traditional packet-level inspection can become noisy and computationally expensive in dynamic network environments.
+
+This project focuses on flow-based behavioral analysis to:
+
+* identify anomalous communication patterns,
+* detect suspicious traffic behavior over time,
+* reduce dependence on static signatures,
+* and support scalable anomaly-oriented monitoring workflows.
+
+Flow-based analytics allow the IDS to capture behavioral relationships between packets rather than treating packets as isolated events.
 
 ---
 
@@ -44,11 +66,11 @@ Suspicious Flow Inspection
 
 # System Architecture
 
-The IDS operates using a flow-based behavioral analysis pipeline rather than isolated packet inspection.
+The IDS operates using a behavioral flow-analysis pipeline rather than isolated packet inspection.
 
 ## 1. Packet Capture
 
-Network packets are captured in real time using Scapy from active network interfaces.
+Network packets are captured in real time using Scapy from active interfaces.
 
 ## 2. Flow Aggregation
 
@@ -76,11 +98,11 @@ The system extracts behavioral traffic statistics including:
 
 ## 4. Anomaly Detection
 
-An Isolation Forest model analyzes flow behavior and identifies statistical outliers representing potentially suspicious traffic patterns.
+An Isolation Forest model analyzes network-flow behavior and identifies statistical outliers representing potentially suspicious traffic activity.
 
 ## 5. Visualization & Triage
 
-Detected anomalies are visualized through an interactive dashboard to support lightweight SOC-style analysis workflows.
+Detected anomalies are visualized through an analyst-oriented dashboard to support lightweight SOC-style traffic inspection and anomaly triage workflows.
 
 ---
 
@@ -88,16 +110,19 @@ Detected anomalies are visualized through an interactive dashboard to support li
 
 ## Detection Analytics Dashboard
 
-The dashboard visualizes:
+<img width="1913" height="889" alt="dashboard" src="https://github.com/user-attachments/assets/0a3b4da0-fa7e-4db9-a093-609bb9a01350" />
 
-* Flow duration distributions
-* Traffic intensity anomalies
-* Packet-rate spikes
-* Byte-transfer outliers
-* Anomaly classification ratios
-* Behavioral traffic patterns
 
-The dashboard is designed to simulate analyst-oriented traffic inspection workflows for anomaly triage and behavioral threat analysis.
+The dashboard provides real-time behavioral traffic analytics for anomaly-oriented monitoring workflows.
+
+Visualizations include:
+
+* flow duration distributions,
+* traffic intensity analysis,
+* anomaly ratios,
+* and byte-versus-packet outlier detection.
+
+The interface is designed to simulate lightweight SOC-style traffic inspection and anomaly triage workflows.
 
 ---
 
@@ -105,33 +130,34 @@ The dashboard is designed to simulate analyst-oriented traffic inspection workfl
 
 ## Top Suspicious Flows
 
+<img width="1863" height="351" alt="suspicious" src="https://github.com/user-attachments/assets/b178f9fc-b5e3-4e39-a845-bc9080fddaa5" />
 
 
-The system surfaces anomalous flows using behavioral indicators such as:
+The suspicious flow analysis module surfaces statistically anomalous network flows using behavioral traffic indicators such as:
 
-* Extremely high packets-per-second rates
-* Unusually large byte-transfer volumes
-* Abnormal packet-size distributions
-* Sustained burst traffic
-* Deviations from baseline flow behavior
-* Unusual TCP flag activity
+* abnormal packet throughput,
+* unusually large byte-transfer volumes,
+* high packets-per-second activity,
+* sustained burst communication,
+* and irregular TCP communication patterns.
 
-Example behavioral indicators:
-
-* High-throughput burst communication
-* Rapid connection spikes
-* Abnormal ACK/SYN patterns
-* Potential scan-like behavior
-* Suspicious flow intensity anomalies
+This enables analyst-oriented inspection of potentially malicious or abnormal network behavior.
 
 ---
 
 # Example Detection Output
 
-<img width="1863" height="351" alt="table" src="https://github.com/user-attachments/assets/bc191d34-b3c3-4502-be6b-b28e7b7a0509" />
-<img width="1913" height="889" alt="sus" src="https://github.com/user-attachments/assets/12df2708-1ebe-44c9-8aca-2aed6b14ad2e" />
+```bash
+[ALERT] Potential Anomalous Flow Detected
 
-
+Source IP: 192.168.1.15
+Destination IP: 192.168.1.1
+Flow Duration: 4.99s
+Packets/sec: 2020.83
+Bytes/sec: 4262951.38
+Anomaly Score: -0.42
+Classification: Suspicious Burst Activity
+```
 
 ---
 
@@ -144,9 +170,23 @@ The IDS was tested against simulated abnormal traffic conditions including:
 * High-frequency packet bursts
 * Abnormal connection spikes
 * Rapid traffic generation
-* Sustained high-throughput flows
+* Sustained high-throughput communication
 
 These simulations were used to evaluate anomaly visibility and behavioral traffic differentiation.
+
+---
+
+# Security Relevance
+
+This project explores practical concepts used in:
+
+* detection engineering,
+* SOC monitoring,
+* anomaly-based intrusion detection,
+* behavioral traffic analytics,
+* and AI-assisted network defense systems.
+
+The workflow aligns with modern defensive-security approaches focused on behavioral anomaly identification rather than purely signature-based detection.
 
 ---
 
@@ -162,7 +202,7 @@ This project focuses on:
 * AI-assisted security analytics
 * Detection engineering experimentation
 
-The project is designed as an educational and research-oriented platform for exploring modern network detection workflows.
+The platform is intended as an educational and research-oriented environment for exploring modern network-detection workflows.
 
 ---
 
@@ -192,7 +232,7 @@ The project is designed as an educational and research-oriented platform for exp
 
 ---
 
-# Run the Project
+# Installation
 
 ## Clone Repository
 
@@ -226,11 +266,6 @@ Anomaly-Detection-IDS/
 ├── model_utils.py
 ├── visualization.py
 ├── logs.csv
-│
-├── images/
-│   ├── dashboard.png
-│   └── suspicious_flows.png
-│
 └── README.md
 ```
 
@@ -247,6 +282,7 @@ Anomaly-Detection-IDS/
 * ATT&CK-aligned event categorization
 * Detection rule correlation
 * Automated reporting pipeline
+* Real-time network alert notifications
 
 ---
 
