@@ -88,7 +88,7 @@ Detected anomalies are visualized through an interactive dashboard to support li
 
 ## Detection Analytics Dashboard
 
-![Traffic Behavior Dashboard](images/dashboard.png)
+![Traffic Behavior Dashboard](sus.png)
 
 The dashboard visualizes:
 
@@ -107,7 +107,7 @@ The dashboard is designed to simulate analyst-oriented traffic inspection workfl
 
 ## Top Suspicious Flows
 
-![Suspicious Flows](images/suspicious_flows.png)
+
 
 The system surfaces anomalous flows using behavioral indicators such as:
 
@@ -130,8 +130,9 @@ Example behavioral indicators:
 
 # Example Detection Output
 
-<img width="1863" height="351" alt="Screenshot from 2026-05-28 22-59-51" src="https://github.com/user-attachments/assets/52d27be6-5a70-413f-9917-4a5be22c5144" />
-<img width="1913" height="889" alt="Screenshot from 2026-05-28 22-48-12" src="https://github.com/user-attachments/assets/896dde70-2095-4b6d-ba77-555ef42adc1e" />
+<img width="1863" height="351" alt="table" src="https://github.com/user-attachments/assets/bc191d34-b3c3-4502-be6b-b28e7b7a0509" />
+<img width="1913" height="889" alt="sus" src="https://github.com/user-attachments/assets/12df2708-1ebe-44c9-8aca-2aed6b14ad2e" />
+
 
 
 ---
